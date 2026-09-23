@@ -1,0 +1,69 @@
+label {text-align: right}
+button {margin: 0px 20px 0px 0px;}
+.form-group.row {padding: 1em 1em 1em 1em;}
+
+header {
+  padding: 1em;
+}
+
+.nav-band {
+  background-color: #57585c;
+  color: white;
+  line-height: 3em;
+  font-weight: bold;
+  font-size: 1.25em;
+  margin: 1em 0;
+}
+
+.nav-band .col-md-5.d-flex.justify-content-end a {
+  font-size: 1.25em; 
+  font-weight: bold; 
+  border: none;
+}
+
+.nav-band .dropdown a {
+  background-color: #57585c;
+}
+
+.nav-band .dropdown-item:focus, .nav-band .dropdown-item:hover {
+  background-color: white;
+}
+
+body {
+  background-color: #E0E0E0;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  min-width: 20em;
+  max-width: 20em;
+}
+
+.nav-band a {
+  color: white;
+}
+
+footer {
+  margin-top: 2em; 
+  background-color: #d7ebff;
+  color: black;
+  font-size: .9em;
+}
+
+footer div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main p {font-size: 1.em}
+
+.comments {font-size: 1.2em}
+
+body {background-color: #c7cdd3;}
+
+pre {border: 5px solid black; border-radius: 16px; padding: 20px}

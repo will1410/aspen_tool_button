@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Aspen button creator for basic pages</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+        <link href=" https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css " rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+  </head>
+    
+  <body>
+  <html>
+
+<header>
+  <a href="#">
+    <img 
+      alt="Logo" 
+      src="aspen_tool_button.png" 
+      width="750em"
+    >
+  </a>
+</header>
+
+<div class="nav-band">
+
+  <div class="row">
+
+    <div class="col-md-5 offset-md-1">
+      <ul class="d-flex gap-4 list-unstyled mb-0">
+        <li><a href="index.html"><i class="bi bi-house-door-fill"></i></a></li>
+        <li><a href="#about">About this project</a></li>
+        <li><a href="https://nextkansas.org/training/button_tool_samples" target="blank">Sample page</a></li>
+        <li><a href="https://will1410.github.io/aspen_tools/" target="_blank">Other tools</a></li>
+        <li><a href="https://github.com/will1410/aspen_tool_button" target="_blank"><i class="bi bi-github"></i></a></li>
+      </ul>
+    </div>
+  
+    <div class="col-md-5 d-flex justify-content-end">
+      <ul class="d-flex gap-4 list-unstyled mb-0">
+
+        <div class="dropdown">
+          <a class="btn btn-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-list"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" class="dropdown-item" href="#about">About this project</a></li>
+            <li><a class="dropdown-item" href="https://nextkansas.org/training/screenshot_tool_samples" target="blank">Sample page</a></li>
+            <li><a class="dropdown-item" href="https://will1410.github.io/aspen_tools/">Other tools</a></li>
+            <li><a class="dropdown-item" href="https://github.com/will1410/aspen_tool_screenshot" target="_blank">Github</a></li>
+          </ul>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div style="background-color: #c7cdd3; padding: 15px;">
+
+  <form id="aspen_button_creator">
+
+    <!-- Type of Button Row -->
+    <div class="form-group row">
+      <label class="col-1 col-form-label">Type of button</label>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="type_primary" name="button_type" value="primary" checked>
+          <label class="form-check-label" for="type_primary">Primary</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="type_secondary" name="button_type" value="secondary">
+          <label class="form-check-label" for="type_secondary">Secondary</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="type_success" name="button_type" value="success">
+          <label class="form-check-label" for="type_success">Success</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="type_danger" name="button_type" value="danger">
+          <label class="form-check-label" for="type_danger">Danger</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="type_warning" name="button_type" value="warning">
+          <label class="form-check-label" for="type_warning">Warning</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="type_info" name="button_type" value="info">
+          <label class="form-check-label" for="type_info">Info</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="type_light" name="button_type" value="light">
+          <label class="form-check-label" for="type_light">Light</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="type_dark" name="button_type" value="dark">
+          <label class="form-check-label" for="type_dark">Dark</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="type_link" name="button_type" value="link">
+          <label class="form-check-label" for="type_link">Link</label>
+        </div>
+      </div>
+      <div class="col-7" style="border: 2px solid black; border-radius: 5px;">
+        <p>Button types will follow the settings in your theme as defined at:<br><span style="font-weight: bold;">Home > Browse > Administration Home > Configuration Templates > Themes > YOUR_LIBRARY > Buttons</span></p>
+      </div>
+    </div>
+
+    <!-- Name Input Row -->
+    <div class="form-group row">
+      <label for="button_name" class="col-1 col-form-label">Button name</label>
+      <div class="col-6">
+        <input id="button_name" name="button_name" type="text" class="form-control">
+      </div>
+    </div>
+
+    <!-- First Radio Row (Selection) -->
+    <div class="form-group row">
+      <div class="offset-1 col-5">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="name_radio-1" name="name_selection" value="user_defined" checked>
+          <label class="form-check-label" for="name_radio-1">User defined name</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="name_radio-2" name="name_selection" value="Print these instructions <i class='fas fa-print'></i>">
+          <label class="form-check-label" for="name_radio-2">Print these instructions</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="name_radio-3" name="name_selection" value="View on YouTube <i class='fa-brands fa-youtube'></i>">
+          <label class="form-check-label" for="name_radio-3">View on YouTube</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="name_radio-4" name="name_selection" value="Aspen help center article <i class='fa-solid fa-circle-question'></i>">
+          <label class="form-check-label" for="name_radio-4">Aspen help center article</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="name_radio-5" name="name_selection" value="External resource <i class='fa-solid fa-arrow-up-right-from-square'></i>">
+          <label class="form-check-label" for="name_radio-5">External resource</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- URL Input Row -->
+    <div class="form-group row">
+      <label for="button_url" class="col-1 col-form-label">URL</label>
+      <div class="col-6">
+        <input id="button_url" name="button_url" class="form-control" placeholder="https://example.com">
+      </div>
+    </div>
+
+    <!-- Form submission -->
+
+    <div class="form-group row">
+      <div class="offset-1 col-8">
+        <button name="submit" type="button" class="btn btn-primary" id="create_button">Submit</button>
+        <button name="copy" type="button" class="btn btn-primary" id="copy_to_clipboard">Copy output to
+          clipboard</button>
+        <button name="reset" type="button" class="btn btn-primary" id="reset">Reset form</button>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="output" class="col-1 col-form-label">Output</label>
+      <div class="col-6">
+        <textarea id="output" name="output" cols="40" rows="1" class="form-control"></textarea>
+      </div>
+    </div>
+
+  </form>
+
+</div>
+
+</html>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js'></script><script  src="./script.js"></script>
+
+  </body>
+  
+</html>
