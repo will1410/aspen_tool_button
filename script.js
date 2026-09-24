@@ -57,7 +57,7 @@ $(document).ready(function () {
     $("#reset").click(function () {
       event.preventDefault();
       $("input, textarea").val("");
-      $("#type_link, #name_radio-1").prop("checked", true);
+      $("#type_primary, #name_radio-1").prop("checked", true);
     });
 
 });
