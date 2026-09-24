@@ -28,13 +28,13 @@ $(document).ready(function () {
         console.log('buttonName: ' + buttonName);
 
         $("#output").val(
-          '<p><a class="' + 
+          '<a class="' + 
           buttonClass +
           '" style="margin-top: 1em;" href="' + 
           button_url +
           '">' + 
           buttonName +
-          '</a></p>'
+          '</a>'
         );
         
 
