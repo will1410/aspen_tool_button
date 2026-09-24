@@ -13,6 +13,11 @@ $(document).ready(function () {
         console.log('button_name: ' + button_name);
         console.log('button_url: ' + button_url);
 
+        if (!button_url) {
+          $("#button_url")[0].reportValidity();
+          return;
+        }
+
         let buttonType = $('input[name="button_type"]:checked').val() || 'primary';
         let buttonClass = 'btn btn-' + buttonType + ' btn-lg';
 
