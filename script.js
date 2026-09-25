@@ -1,3 +1,10 @@
+/*
+  MIT License
+  Copyright (c) 2026 George H. Williams
+  Permission is hereby granted... 
+  [See MIT License text for full details]
+*/
+
 $(document).ready(function () {
 
   /* When the "Submit" button is clicked, all this happens */
