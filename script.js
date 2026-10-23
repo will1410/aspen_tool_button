@@ -49,7 +49,10 @@ $(document).ready(function () {
         }
 
         let buttonType = $('input[name="button_type"]:checked').val() || 'primary';
-        let buttonClass = 'btn btn-' + buttonType + ' btn-lg';
+        let buttonsize = $('input[name="button_size"]:checked').val() || 'btn-lg';
+        let buttonClass = 'btn btn-' + buttonType + ' ' + buttonsize;
+
+        const buttonTarget = document.querySelector('#open_new_window').checked ? '_blank' : '_self';
 
         let buttonName = ''
 
@@ -64,6 +67,8 @@ $(document).ready(function () {
           buttonClass +
           '" style="margin-top: 1em;" href="' + 
           button_url +
+          '" target="' + 
+          buttonTarget + 
           '">' + 
           buttonName +
           '</a>'
