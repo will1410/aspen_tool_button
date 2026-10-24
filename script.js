@@ -1,96 +1,113 @@
+
 /*
   MIT License
   Copyright (c) 2026 George H. Williams
-  Permission is hereby granted... 
+  Permission is hereby granted...
   [See MIT License text for full details]
 */
 
 $(document).ready(function () {
 
-  /* When the "Submit" button is clicked, all this happens */
-    $("#create_button").click(function () {
-      
-      // Prevent the form from actually submitting
-        event.preventDefault();
+  /* Determines whether the user-defined name is required */
+  function updateNameRequirement() {
 
-      /* Gets data from the form to build the output */
-        let button_name = $("#button_name").val().trim();
-        let button_url = $("#button_url").val().trim();
-        
-        console.log('button_name: ' + button_name);
-        console.log('button_url: ' + button_url);
+    const userDefined = $('#name_radio-1').is(':checked');
 
-        let buttonNameRaw = $('input[name="name_selection"]:checked').val() || '-ERROR-';
+    $('#button_name').prop('required', userDefined);
+  }
 
-      /* Makes URL a required field always */
-        if (!button_url) {
-          $("#button_url")[0].reportValidity();
-          return;
-        }
+  /* Set initial required status when page loads */
+  updateNameRequirement();
 
-      /* Make name required if name is user defined */
-        $('input[name="name_selection"]').change(function () {
-          if ($(this).val() === 'user_defined') {
-            $("#button_name").prop("required", true);
-          } else {
-            $("#button_name").prop("required", false);
-          }
-        });
+  /* Update required status whenever name selection changes */
+  $('input[name="name_selection"]').change(function () {
+    updateNameRequirement();
+  });
 
-      /* Validate form to make sure name and url are not blank */
-        if (!button_url) {
-          $("#button_url")[0].reportValidity();
-          return;
-        }
 
-        if ($("#button_name").prop("required") && !button_name) {
-          $("#button_name")[0].reportValidity();
-          return;
-        }
+  /* When the "Submit" button is clicked */
+  $("#create_button").click(function () {
 
-        let buttonType = $('input[name="button_type"]:checked').val() || 'primary';
-        let buttonsize = $('input[name="button_size"]:checked').val() || 'btn-lg';
-        let buttonClass = 'btn btn-' + buttonType + ' ' + buttonsize;
+    /* Gets data from the form */
+    let button_name = $("#button_name").val().trim();
+    let button_url = $("#button_url").val().trim();
 
-        const buttonTarget = document.querySelector('#open_new_window').checked ? '_blank' : '_self';
+    let buttonNameRaw = $('input[name="name_selection"]:checked').val() || '-ERROR-';
 
-        let buttonName = ''
+    /* Make sure URL is valid and not blank */
+    if (!$("#button_url")[0].checkValidity()) {
+      $("#button_url")[0].reportValidity();
+      return;
+    }
 
-        if (buttonNameRaw === 'user_defined') {
-          buttonName = button_name;
-        } else {
-          buttonName = buttonNameRaw;
-        }
+    /* Make sure name is entered if user-defined */
+    if ($("#button_name").prop("required") && !button_name) {
+      $("#button_name")[0].reportValidity();
+      return;
+    }
 
-        $("#output").val(
-          '<a class="' + 
-          buttonClass +
-          '" style="margin-top: 1em;" href="' + 
-          button_url +
-          '" target="' + 
-          buttonTarget + 
-          '">' + 
-          buttonName +
-          '</a>'
-        );
+    /* Gets button type and size */
+    let buttonType = $('input[name="button_type"]:checked').val() || 'primary';
+    let buttonsize = $('input[name="button_size"]:checked').val() || 'btn-lg';
+    let buttonClass = 'btn btn-' + buttonType + ' ' + buttonsize;
 
-    });
+    /* Gets button target */
+    const buttonTarget = $('#open_new_window').is(':checked') ? '_blank' : '_self';
 
-  /* Adds function to "Copy . . . " button */
-    $("#copy_to_clipboard").click(function () {
-      event.preventDefault();
-      var copy_output = $("#output").val().trim();
-      console.log(copy_output);
-      navigator.clipboard.writeText(copy_output);
-    })
+    /* Determines button name */
+    let buttonName = '';
+
+    if (buttonNameRaw === 'user_defined') {
+      buttonName = $('<div>').text(button_name).html();
+    } else {
+      buttonName = buttonNameRaw;
+    }
+
+    /* Generates the button HTML */
+    $("#output").val(
+      '<a class="' +
+      buttonClass +
+      '" style="margin-top: 1em;" href="' +
+      $('<div>').text(button_url).html() +
+      '" target="' +
+      buttonTarget +
+      '"' +
+      (buttonTarget === '_blank' ? ' rel="noopener noreferrer"' : '') +
+      '>' +
+      buttonName +
+      '</a>'
+    );
+
+  });
+
+
+  /* Adds function to "Copy output to clipboard" button */
+  $("#copy_to_clipboard").click(async function () {
+
+    let copy_output = $("#output").val().trim();
+
+    if (!copy_output) {
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(copy_output);
+    } catch (error) {
+      console.error('Unable to copy to clipboard:', error);
+    }
+
+  });
+
 
   /* Adds function to "Reset" button */
-    $("#reset").click(function (event) {
-      event.preventDefault();
+  $("#reset").click(function () {
 
-      $("input, textarea").val("");
-      $("#type_primary, #name_radio-1").prop("checked", true);
-      $("#button_name").prop("required", true);
-    });
+    /* Restores original HTML form defaults */
+    $("#aspen_button_creator")[0].reset();
+
+    /* Recalculates required status */
+    updateNameRequirement();
+
+  });
 
 });
