@@ -1,244 +1,427 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Aspen button creator for basic pages</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
-        <link href=" https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css " rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="css/custom.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
-    <!--
+  <title>Aspen button creator for basic pages</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- Custom stylesheets -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!--
     MIT License
     Copyright (c) 2026 George H. Williams
-    Permission is hereby granted... 
+    Permission is hereby granted...
     [See MIT License text for full details]
-    -->
+  -->
 
-  </head>
-    
-  <body>
-  <html>
+</head>
 
-<header>
-  <a href="#">
-    <img 
-      alt="Logo" 
-      src="aspen_tool_button.png" 
-      width="750em"
-    >
-  </a>
-</header>
+<body>
 
-<div class="nav-band">
+  <!-- Header -->
+  <header>
+    <a href="#">
+      <img alt="Logo" src="aspen_tool_button.png" style="width: 52%; height: auto;">
+    </a>
+  </header>
 
-  <div class="row">
+  <!-- Navigation -->
+  <nav class="nav-band" aria-label="Main navigation">
 
-    <div class="col-md-5 offset-md-1">
-      <ul class="d-flex gap-4 list-unstyled mb-0">
-        <li><a href="index.html"><i class="bi bi-house-door-fill"></i></a></li>
-        <li><a href="#about">About this project</a></li>
-        <li><a href="https://nextkansas.org/testing/tool_samples#button" target="blank">Sample page</a></li>
-        <li><a href="https://will1410.github.io/aspen_tools/">Other tools</a></li>
-        <li><a href="https://github.com/will1410/aspen_tool_button" target="_blank"><i class="bi bi-github"></i></a></li>
-      </ul>
-    </div>
-  
-    <div class="col-md-5 d-flex justify-content-end">
-      <ul class="d-flex gap-4 list-unstyled mb-0">
+    <div class="container-fluid">
+      <div class="row">
 
-        <div class="dropdown">
-          <a class="btn btn-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-list"></i>
-          </a>
-
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" class="dropdown-item" href="#about">About this project</a></li>
-            <li><a class="dropdown-item" href="https://nextkansas.org/testing/tool_samples#button" target="blank">Sample page</a></li>
-            <li><a class="dropdown-item" href="https://will1410.github.io/aspen_tools/">Other tools</a></li>
-            <li><a class="dropdown-item" href="https://github.com/will1410/aspen_tool_screenshot" target="_blank">Github</a></li>
+        <div class="col-md-5 offset-md-1">
+          <ul class="d-flex gap-4 list-unstyled mb-0">
+            <li>
+              <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
+            </li>
+            <li>
+              <a href="#about">About this project</a>
+            </li>
+            <li>
+              <a href="https://nextkansas.org/testing/tool_samples#button"
+                target="_blank" rel="noopener noreferrer">Sample page</a>
+            </li>
+            <li>
+              <a href="https://will1410.github.io/aspen_tools/">Other tools</a>
+            </li>
+            <li>
+              <a href="https://github.com/will1410/aspen_tool_button"
+                target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>
+              </a>
+            </li>
           </ul>
         </div>
 
-    </div>
+        <div class="col-md-5 d-flex justify-content-end">
+          <ul class="d-flex gap-4 list-unstyled mb-0">
 
-  </div>
+            <li class="dropdown">
+              <a class="btn btn-secondary" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-list"></i>
+              </a>
 
-</div>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#about">About this project</a>
+                </li>
+                <li>
+                  <a class="dropdown-item"
+                    href="https://nextkansas.org/testing/tool_samples#button"
+                    target="_blank" rel="noopener noreferrer">Sample page</a>
+                </li>
+                <li>
+                  <a class="dropdown-item"
+                    href="https://will1410.github.io/aspen_tools/">Other tools</a>
+                </li>
+                <li>
+                  <a class="dropdown-item"
+                    href="https://github.com/will1410/aspen_tool_button"
+                    target="_blank" rel="noopener noreferrer">Github</a>
+                </li>
+              </ul>
+            </li>
 
-<div style="background-color: #c7cdd3; padding: 15px;">
+          </ul>
+        </div>
 
-  <form id="aspen_button_creator">
-
-    <!-- Type of Button Row -->
-    <div class="form-group row">
-      <label class="col-1 col-form-label">Type of button</label>
-      <div class="col-3">
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="type_primary" name="button_type" value="primary" checked>
-          <label class="form-check-label" for="type_primary">Primary</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="type_default" name="button_type" value="default">
-          <label class="form-check-label" for="type_default">Default</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="type_action" name="button_type" value="action">
-          <label class="form-check-label" for="type_action">Action</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="type_editions" name="button_type" value="editions">
-          <label class="form-check-label" for="type_editions">Editions</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="type_tools" name="button_type" value="tools">
-          <label class="form-check-label" for="type_tools">Tools</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="type_success" name="button_type" value="success">
-          <label class="form-check-label" for="type_success">Success</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="type_info" name="button_type" value="info">
-          <label class="form-check-label" for="type_info">Info</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="type_warning" name="button_type" value="warning">
-          <label class="form-check-label" for="type_warning">Warning</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="type_danger" name="button_type" value="danger">
-          <label class="form-check-label" for="type_danger">Danger</label>
-        </div>
-      </div>
-      <div class="col-7" style="border: 2px solid black; border-radius: 5px;">
-        <p>Button types will follow the settings in your theme as defined at:<br><span style="font-weight: bold;">Home > Browse > Administration Home > Configuration Templates > Themes > THEME_NAME > Buttons</span></p>
       </div>
     </div>
 
-    <!-- Button size Row -->
-    <div class="form-group row">
-      <label class="col-1 col-form-label">Button size</label>
-      <div class="col-3">
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="size_large" name="button_size" value="btn-lg" checked>
-          <label class="form-check-label" for="size_large">Large</label>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+
+    <div style="background-color: #c7cdd3; padding: 15px;">
+
+      <form id="aspen_button_creator">
+
+        <!-- Type of Button Row -->
+        <div class="row mb-3">
+
+          <label class="col-12 col-md-1 col-form-label">Type of button</label>
+
+          <div class="col-12 col-md-3">
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="type_primary"
+                name="button_type" value="primary" checked>
+              <label class="form-check-label" for="type_primary">Primary</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="type_default"
+                name="button_type" value="default">
+              <label class="form-check-label" for="type_default">Default</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="type_action"
+                name="button_type" value="action">
+              <label class="form-check-label" for="type_action">Action</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="type_editions"
+                name="button_type" value="editions">
+              <label class="form-check-label" for="type_editions">Editions</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="type_tools"
+                name="button_type" value="tools">
+              <label class="form-check-label" for="type_tools">Tools</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="type_success"
+                name="button_type" value="success">
+              <label class="form-check-label" for="type_success">Success</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="type_info"
+                name="button_type" value="info">
+              <label class="form-check-label" for="type_info">Info</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="type_warning"
+                name="button_type" value="warning">
+              <label class="form-check-label" for="type_warning">Warning</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="type_danger"
+                name="button_type" value="danger">
+              <label class="form-check-label" for="type_danger">Danger</label>
+            </div>
+
+          </div>
+
+          <div class="col-12 col-md-7" style="border: 2px solid black; border-radius: 5px;">
+            <p>
+              Button types will follow the settings in your theme as defined at:<br>
+              <span style="font-weight: bold;">
+                Home > Browse > Administration Home > Configuration Templates >
+                Themes > THEME_NAME > Buttons
+              </span>
+            </p>
+          </div>
+
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="size_small" name="button_size" value="btn-sm">
-          <label class="form-check-label" for="size_small">Small</label>
+
+        <!-- Button Size Row -->
+        <div class="row mb-3">
+
+          <label class="col-12 col-md-1 col-form-label">Button size</label>
+
+          <div class="col-12 col-md-3">
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="size_large"
+                name="button_size" value="btn-lg" checked>
+              <label class="form-check-label" for="size_large">Large</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="size_small"
+                name="button_size" value="btn-sm">
+              <label class="form-check-label" for="size_small">Small</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="size_extra_small"
+                name="button_size" value="btn-xs">
+              <label class="form-check-label" for="size_extra_small">Extra-small</label>
+            </div>
+
+          </div>
+
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="size_extra_small" name="button_size" value="btn-xs">
-          <label class="form-check-label" for="size_extra_small">Extra-small</label>
+
+        <!-- Target Row -->
+        <div class="row mb-3">
+
+          <label class="col-12 col-md-1 col-form-label">Button target</label>
+
+          <div class="col-12 col-md-4">
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="open_new_window"
+                name="button_type" value="_blank">
+              <label class="form-check-label" for="open_new_window">
+                Open link in new window
+              </label>
+            </div>
+
+          </div>
+
         </div>
+
+        <!-- Name Input Row -->
+        <div class="row mb-3">
+
+          <label for="button_name" class="col-12 col-md-1 col-form-label">
+            Button name
+          </label>
+
+          <div class="col-12 col-md-6">
+            <input id="button_name" name="button_name" type="text"
+              class="form-control" required>
+          </div>
+
+        </div>
+
+        <!-- Name Selection Row -->
+        <div class="row mb-3">
+
+          <div class="offset-md-1 col-12 col-md-5">
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="name_radio-1"
+                name="name_selection" value="user_defined" checked>
+              <label class="form-check-label" for="name_radio-1">
+                User defined name
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="name_radio-2"
+                name="name_selection"
+                value="Print these instructions <i class='fas fa-print'></i>">
+              <label class="form-check-label" for="name_radio-2">
+                Print these instructions
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="name_radio-3"
+                name="name_selection"
+                value="View on YouTube <i class='fa-brands fa-youtube'></i>">
+              <label class="form-check-label" for="name_radio-3">
+                View on YouTube
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="name_radio-4"
+                name="name_selection"
+                value="Aspen help center article <i class='fa fa-circle-question'></i>">
+              <label class="form-check-label" for="name_radio-4">
+                Aspen help center article
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="name_radio-5"
+                name="name_selection"
+                value="External resource <i class='fa fa-square-up-right'></i>">
+              <label class="form-check-label" for="name_radio-5">
+                External resource
+              </label>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- URL Input Row -->
+        <div class="row mb-3">
+
+          <label for="button_url" class="col-12 col-md-1 col-form-label">
+            URL
+          </label>
+
+          <div class="col-12 col-md-6">
+            <input id="button_url" name="button_url" type="url"
+              class="form-control" placeholder="https://example.com" required>
+          </div>
+
+        </div>
+
+        <!-- Form Submission -->
+        <div class="row mb-3">
+
+          <div class="offset-md-1 col-12 col-md-8">
+
+            <button name="submit" type="button" class="btn btn-primary"
+              id="create_button">Submit</button>
+
+            <button name="copy" type="button" class="btn btn-primary"
+              id="copy_to_clipboard">Copy output to clipboard</button>
+
+            <button name="reset" type="button" class="btn btn-primary"
+              id="reset">Reset form</button>
+
+          </div>
+
+        </div>
+
+        <!-- Output Row -->
+        <div class="row mb-3">
+
+          <label for="output" class="col-12 col-md-1 col-form-label">
+            Output
+          </label>
+
+          <div class="col-12 col-md-6">
+            <textarea id="output" name="output" rows="1"
+              class="form-control"></textarea>
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+    <!-- About Section -->
+    <div class="container about mt-5 comments" id="about">
+
+      <h2>About</h2>
+
+      <p>
+        Aspen uses the Bootstrap framework so there are many classes and layouts
+        we have access to when we create basic or custom pages in Aspen. Because
+        Aspen uses a basic WYSIWYG editor, if you want to add Bootstrap elements
+        to a page, you have to go to the code view and hand-code things like
+        buttons or badges or to use the Bootstrap column configurations or other
+        Bootstrap elements.
+      </p>
+
+      <p>
+        On some of the training pages we are creating for Next Search Catalog
+        we wanted to add links to go to other resources and with Bootstrap you
+        can turn simple links into buttons that look cool and stand out. This
+        tool is designed to make adding a button to an Aspen basic or custom
+        page really easy and really consistent. To get the HTML for a button,
+        all you have to do is enter the name of the button, the URL for the
+        link you want the button to take you to and click a few radio buttons.
+        There are even 4 pre-defined button names, so if you are using buttons
+        to link to resources that are consistently the same, those buttons can
+        have the same look and feel across all the pages you use them on.
+      </p>
+
+      <p>
+        This entire project is
+        <a href="https://github.com/will1410/aspen_tool_button"
+          target="_blank" rel="noopener noreferrer">available on Github</a>,
+        so if you'd like to see the source code or download a copy of the
+        project and change it to suit your needs, feel free to do so.
+      </p>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+
+    <div class="row">
+
+      <div class="col-md-3 offset-md-7">
+
+        <article class="mit-license">
+          <p>
+            The MIT License (MIT)<br>
+            Copyright (c) 2026 George H. Williams<br>
+            Permission is hereby granted, free of charge...<br>
+            [click here for <a href="LICENSE">full license</a>]
+          </p>
+        </article>
+
       </div>
-    </div>
 
-    <!-- Target Row -->
-    <div class="form-group row">
-      <label class="col-1 col-form-label">Button target</label>
-      <div class="col-4">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="open_new_window" name="button_type" value="_blank">
-          <label class="form-check-label" for="open_new_window">Open link in new window</label>
-        </div>
+      <div class="col-md-1">
       </div>
-    </div>
-
-    <!-- Name Input Row -->
-    <div class="form-group row">
-      <label for="button_name" class="col-1 col-form-label">Button name</label>
-      <div class="col-6">
-        <input id="button_name" name="button_name" type="text" class="form-control" required>
-      </div>
-    </div>
-
-    <!-- First Radio Row (Selection) -->
-    <div class="form-group row">
-      <div class="offset-1 col-5">
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="name_radio-1" name="name_selection" value="user_defined" checked>
-          <label class="form-check-label" for="name_radio-1">User defined name</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="name_radio-2" name="name_selection" value="Print these instructions <i class='fas fa-print'></i>">
-          <label class="form-check-label" for="name_radio-2">Print these instructions</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="name_radio-3" name="name_selection" value="View on YouTube <i class='fa-brands fa-youtube'></i>">
-          <label class="form-check-label" for="name_radio-3">View on YouTube</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="name_radio-4" name="name_selection" value="Aspen help center article <i class='fa fa-circle-question'></i>">
-          <label class="form-check-label" for="name_radio-4">Aspen help center article</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="name_radio-5" name="name_selection" value="External resource <i class='fa fa-square-up-right'></i>">
-          <label class="form-check-label" for="name_radio-5">External resource</label>
-        </div>
-      </div>
-    </div>
-
-    <!-- URL Input Row -->
-    <div class="form-group row">
-      <label for="button_url" class="col-1 col-form-label">URL</label>
-      <div class="col-6">
-        <input id="button_url" name="button_url" class="form-control" placeholder="https://example.com" required>
-      </div>
-    </div>
-
-    <!-- Form submission -->
-
-    <div class="form-group row">
-      <div class="offset-1 col-8">
-        <button name="submit" type="button" class="btn btn-primary" id="create_button">Submit</button>
-        <button name="copy" type="button" class="btn btn-primary" id="copy_to_clipboard">Copy output to
-          clipboard</button>
-        <button name="reset" type="button" class="btn btn-primary" id="reset">Reset form</button>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label for="output" class="col-1 col-form-label">Output</label>
-      <div class="col-6">
-        <textarea id="output" name="output" cols="40" rows="1" class="form-control"></textarea>
-      </div>
-    </div>
-
-  </form>
-
-</div>
-
-<div class="container about mt-5 comments" id="about">
-<h2>About</h2>
-<p>Aspen uses the Bootstrap framework so there are many classes and layouts we have access to when we create basic or custom pages in Aspen.  Because Aspen uses a basic WYSIWYG editor, if you want to add Bootstrap elements to a page, you have to go to the code view and hand-code things like buttons or badges or to use the Bootstrap column configurations or other Bootstrap elements.</p>
-<p>On some of the training pages we are creating for Next Search Catalog we wanted to add links to go to other resources and with Bootstrap you can turn simple links into buttons that look cool and stand out.  This tool is designed to make adding a button to an Aspen basic or custom page really easy and really consistent.  To get the HTML for a button, all you have to do is enter the name of the button, the URL for the link you want the button to take you to and click a few radio buttons.  There are even 4 pre-defined button names, so if you are using buttons to link to resources that are consistently the same, those buttons can have the same look and feel across all the pages you use them on.</p>
-<p>This entire project is <a href="https://github.com/will1410/aspen_tool_button" target="_blank">available on Github</a>, so if you'd like to see the source code or if you'd like to download a copy of the project and change it to suit your needs, feel free to do so.</p>
-</div>
-
-<footer>
-  <div class="row">
-    <div class="col-md-3 offset-md-7">
-      <article class="mit-license">
-        <p>The MIT License (MIT)<br>
-        Copyright (c) 2026 George H. Williams<br>
-        Permission is hereby granted, free of charge...<br>
-        [click here for <a href="LICENSE">full license</a>]
-      </article>
-    </div>
-    <div class="col-md-1">
 
     </div>
-  </div>
-</footer>
 
-</html>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js'></script><script  src="./script.js"></script>
+  </footer>
 
-  </body>
-  
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="./script.js"></script>
+
+</body>
 </html>

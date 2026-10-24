@@ -1,17 +1,31 @@
 /*
   MIT License
   Copyright (c) 2026 George H. Williams
-  Permission is hereby granted... 
+  Permission is hereby granted...
   [See MIT License text for full details]
 */
 
-label {text-align: right}
-button {margin: 0px 20px 0px 0px;}
-.form-group.row {padding: 1em 1em 1em 1em;}
+/* General page styling */
+
+body {
+  background-color: #c7cdd3;
+}
 
 header {
   padding: 1em;
 }
+
+/* Form styling */
+
+.col-form-label {
+  text-align: right;
+}
+
+#aspen_button_creator button {
+  margin-right: 20px;
+}
+
+/* Navigation */
 
 .nav-band {
   background-color: #57585c;
@@ -22,23 +36,28 @@ header {
   margin: 1em 0;
 }
 
-.nav-band .col-md-5.d-flex.justify-content-end a {
-  font-size: 1.25em; 
-  font-weight: bold; 
+.nav-band a {
+  color: white;
+}
+
+.nav-band .dropdown > a {
+  background-color: #57585c;
+  font-size: 1.25em;
+  font-weight: bold;
   border: none;
 }
 
-.nav-band .dropdown a {
-  background-color: #57585c;
+.nav-band .dropdown-item {
+  color: #212529;
 }
 
-.nav-band .dropdown-item:focus, .nav-band .dropdown-item:hover {
+.nav-band .dropdown-item:focus,
+.nav-band .dropdown-item:hover {
   background-color: white;
+  color: #212529;
 }
 
-body {
-  background-color: #E0E0E0;
-}
+/* Card styling */
 
 .card img {
   display: block;
@@ -51,26 +70,33 @@ body {
   max-width: 20em;
 }
 
-.nav-band a {
-  color: white;
+/* About section */
+
+.comments {
+  font-size: 1.2em;
 }
 
+/* Footer */
+
 footer {
-  margin-top: 2em; 
+  margin-top: 2em;
   background-color: #d7ebff;
   color: black;
   font-size: .9em;
 }
 
-footer div {
-  display: flex;
-  justify-content: flex-end;
+/* Code formatting */
+
+pre {
+  border: 5px solid black;
+  border-radius: 16px;
+  padding: 20px;
 }
 
-.main p {font-size: 1.em}
+/* Responsive adjustments */
 
-.comments {font-size: 1.2em}
-
-body {background-color: #c7cdd3;}
-
-pre {border: 5px solid black; border-radius: 16px; padding: 20px}
+@media (max-width: 767.98px) {
+  .col-form-label {
+    text-align: left;
+  }
+}
