@@ -35,8 +35,8 @@ $(document).ready(function () {
     let buttonNameRaw = $('input[name="name_selection"]:checked').val() || '-ERROR-';
 
     /* Make sure URL is valid and not blank */
-    if (!$("#button_url")[0].checkValidity()) {
-      $("#button_url")[0].reportValidity();
+    if (!button_url) {
+      $buttonUrl[0].reportValidity();
       return;
     }
 
