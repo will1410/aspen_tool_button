@@ -48,11 +48,12 @@ $(document).ready(function () {
 
     /* Gets button type and size */
     let buttonType = $('input[name="button_type"]:checked').val() || 'primary';
-    let buttonsize = $('input[name="button_size"]:checked').val() || 'btn-lg';
+    let buttonsize = $('input[name="button_size"]:checked').val() || '';
     let buttonClass = 'btn btn-' + buttonType + ' ' + buttonsize;
 
     /* Gets button target */
     const buttonTarget = $('#open_new_window').is(':checked') ? '_blank' : '_self';
+    const buttonTargetIcon = $('#open_new_window').is(':checked') ? '  <i class="fa fa-square-up-right"></i>' : '';
 
     /* Determines button name */
     let buttonName = '';
@@ -75,6 +76,7 @@ $(document).ready(function () {
       (buttonTarget === '_blank' ? ' rel="noopener noreferrer"' : '') +
       '>' +
       buttonName +
+      buttonTargetIcon +
       '</a>'
     );
 
